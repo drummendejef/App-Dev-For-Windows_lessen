@@ -22,7 +22,7 @@
     <AppXManifest Include="E:\School\2015 - 2016\App Dev For Windows\Lessen\Week 1\Labo\RelativePanel en VSM\RelativePanel en VSM\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-09-25T09:40:08.683</Modified>
+      <Modified>2015-09-25T10:21:58.500</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -74,7 +74,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\School\2015 - 2016\App Dev For Windows\Lessen\Week 1\Labo\RelativePanel en VSM\RelativePanel en VSM\bin\x86\Debug\Core\entrypoint\RelativePanel en VSM.exe">
       <PackagePath>entrypoint\RelativePanel en VSM.exe</PackagePath>
-      <Modified>2015-09-25T09:40:07.640</Modified>
+      <Modified>2015-09-25T10:21:57.653</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\School\2015 - 2016\App Dev For Windows\Lessen\Week 1\Labo\RelativePanel en VSM\RelativePanel en VSM\bin\x86\Debug\Core\Microsoft.ApplicationInsights.dll">
       <PackagePath>Microsoft.ApplicationInsights.dll</PackagePath>
@@ -106,15 +106,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\School\2015 - 2016\App Dev For Windows\Lessen\Week 1\Labo\RelativePanel en VSM\RelativePanel en VSM\bin\x86\Debug\Core\RelativePanel en VSM.exe">
       <PackagePath>RelativePanel en VSM.exe</PackagePath>
-      <Modified>2015-09-25T09:40:08.679</Modified>
+      <Modified>2015-09-25T10:21:58.498</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\School\2015 - 2016\App Dev For Windows\Lessen\Week 1\Labo\RelativePanel en VSM\RelativePanel en VSM\bin\x86\Debug\Core\RelativePanel en VSM.xr.xml">
       <PackagePath>RelativePanel en VSM.xr.xml</PackagePath>
-      <Modified>2015-09-25T09:34:57.722</Modified>
+      <Modified>2015-09-25T10:21:57.422</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\School\2015 - 2016\App Dev For Windows\Lessen\Week 1\Labo\RelativePanel en VSM\RelativePanel en VSM\bin\x86\Debug\Core\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2015-09-25T09:40:08.092</Modified>
+      <Modified>2015-09-25T10:21:58.111</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\School\2015 - 2016\App Dev For Windows\Lessen\Week 1\Labo\RelativePanel en VSM\RelativePanel en VSM\bin\x86\Debug\Core\System.AppContext.dll">
       <PackagePath>System.AppContext.dll</PackagePath>

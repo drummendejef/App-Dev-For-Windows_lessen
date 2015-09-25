@@ -7,22 +7,144 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <TextBlock x:Name="txtOefening1" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Oefening 1" VerticalAlignment="Top" RenderTransformOrigin="0.471,0.584"/>
-        <Image x:Name="imgProfile" HorizontalAlignment="Left" Height="80" Margin="10,35,0,0" VerticalAlignment="Top" Width="100" AllowDrop="True" Source="Assets/TestPicture.png" />
-        <TextBlock x:Name="txtTitel" HorizontalAlignment="Left" Margin="115,35,0,0" TextWrapping="Wrap" Text="Titel" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.45"/>
-        <TextBlock x:Name="txtNaam" HorizontalAlignment="Left" Margin="188,35,0,0" TextWrapping="Wrap" Text="Naam" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.45"/>
-        <TextBlock x:Name="txtVoorNaam" HorizontalAlignment="Left" Margin="308,35,0,0" TextWrapping="Wrap" Text="Voornaam" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.45"/>
-        <TextBlock x:Name="txtAdres" HorizontalAlignment="Left" Margin="419,35,0,0" TextWrapping="Wrap" Text="Adres" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.45"/>
-        <TextBlock x:Name="txtPostcode" HorizontalAlignment="Left" Margin="533,35,0,0" TextWrapping="Wrap" Text="Postcode" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.45"/>
-        <TextBlock x:Name="txtGemeente" HorizontalAlignment="Left" Margin="605,35,0,0" TextWrapping="Wrap" Text="Gemeente" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.45"/>
-        <ComboBox x:Name="comboBoxTitel" HorizontalAlignment="Left" Margin="115,83,0,0" VerticalAlignment="Top" Width="52"/>
-        <TextBox x:Name="textBoxNaam" HorizontalAlignment="Left" Margin="188,83,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="112"/>
-        <TextBox x:Name="textBoxVoornaam" HorizontalAlignment="Left" Margin="305,83,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="109"/>
-        <TextBox x:Name="textBoxAdres" HorizontalAlignment="Left" Margin="419,83,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="109"/>
-        <TextBox x:Name="textBoxPostcode" HorizontalAlignment="Left" Margin="533,83,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="67"/>
-        <TextBox x:Name="textBoxPostcode_Copy" HorizontalAlignment="Left" Margin="605,83,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="121"/>
 
 
-    </Grid>
+    <ScrollViewer Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <ScrollViewer.Resources>
+            <Style x:Key="Basistextblock" TargetType="TextBlock">
+                <Setter Property="Foreground" Value="DarkBlue"/>
+            </Style>
+        </ScrollViewer.Resources>
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="VisualStateGroup">
+                <VisualState x:Name="Plus600">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="600"/>
+                    </VisualState.StateTriggers>
+                </VisualState>
+                <VisualState x:Name="Min600">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="1"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="txtTitel.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                <Thickness>10,120,0,0</Thickness>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Target="comboBoxTitel.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                <Thickness>10,140,0,0</Thickness>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Target="txtNaam.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                <Thickness>10,172,0,0</Thickness>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Target="textBoxNaam.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                <Thickness>10,197,10,0</Thickness>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Target="textBoxNaam.(FrameworkElement.Width)" Value="NaN"/>
+                        <Setter Target="textBoxNaam.(FrameworkElement.HorizontalAlignment)" Value="Stretch"/>
+                        <Setter Target="txtVoorNaam.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                <Thickness>10,234,10,0</Thickness>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Target="txtVoorNaam.(FrameworkElement.VerticalAlignment)" Value="Top"/>
+                        <Setter Target="txtVoorNaam.(FrameworkElement.Width)" Value="NaN"/>
+                        <Setter Target="txtVoorNaam.(FrameworkElement.HorizontalAlignment)" Value="Stretch"/>
+                        <Setter Target="textBoxVoornaam.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                <Thickness>10,259,10,0</Thickness>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Target="textBoxVoornaam.(FrameworkElement.Width)" Value="NaN"/>
+                        <Setter Target="textBoxVoornaam.(FrameworkElement.HorizontalAlignment)" Value="Stretch"/>
+                        <Setter Target="txtAdres.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                <Thickness>10,296,10,0</Thickness>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Target="txtAdres.(FrameworkElement.VerticalAlignment)" Value="Top"/>
+                        <Setter Target="txtAdres.(FrameworkElement.Width)" Value="NaN"/>
+                        <Setter Target="txtAdres.(FrameworkElement.Height)" Value="31"/>
+                        <Setter Target="txtAdres.(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Value="1"/>
+                        <Setter Target="txtAdres.(FrameworkElement.HorizontalAlignment)" Value="Stretch"/>
+                        <Setter Target="txtPostcode.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                <Thickness>10,364,0,0</Thickness>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Target="txtPostcode.(FrameworkElement.Width)" Value="81"/>
+                        <Setter Target="txtPostcode.(FrameworkElement.VerticalAlignment)" Value="Top"/>
+                        <Setter Target="textBoxAdres.(FrameworkElement.VerticalAlignment)" Value="Top"/>
+                        <Setter Target="textBoxAdres.(FrameworkElement.Width)" Value="NaN"/>
+                        <Setter Target="textBoxAdres.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                <Thickness>10,327,10,0</Thickness>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Target="textBoxAdres.(FrameworkElement.Height)" Value="0"/>
+                        <Setter Target="textBoxAdres.(FrameworkElement.HorizontalAlignment)" Value="Stretch"/>
+                        <Setter Target="textBoxPostcode.(FrameworkElement.VerticalAlignment)" Value="Top"/>
+                        <Setter Target="textBoxPostcode.(FrameworkElement.Width)" Value="NaN"/>
+                        <Setter Target="textBoxPostcode.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                <Thickness>10,384,10,0</Thickness>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Target="textBoxPostcode.(FrameworkElement.Height)" Value="38"/>
+                        <Setter Target="textBoxPostcode.(FrameworkElement.HorizontalAlignment)" Value="Stretch"/>
+                        <Setter Target="txtGemeente.(FrameworkElement.Width)" Value="221"/>
+                        <Setter Target="txtGemeente.(FrameworkElement.Height)" Value="21"/>
+                        <Setter Target="txtGemeente.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                <Thickness>10,427,0,0</Thickness>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Target="txtGemeente.(FrameworkElement.VerticalAlignment)" Value="Top"/>
+                        <Setter Target="txtGemeente.(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Value="1"/>
+                        <Setter Target="textBoxPostcode_Copy.(FrameworkElement.VerticalAlignment)" Value="Top"/>
+                        <Setter Target="textBoxPostcode_Copy.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                <Thickness>10,453,10,0</Thickness>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Target="textBoxPostcode_Copy.(FrameworkElement.HorizontalAlignment)" Value="Stretch"/>
+                        <Setter Target="textBoxPostcode_Copy.(FrameworkElement.Width)" Value="NaN"/>
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+        <Grid>
+            <TextBlock x:Name="txtOefening1" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Oefening 1" VerticalAlignment="Top" RenderTransformOrigin="0.471,0.584" Foreground="Black"/>
+            <Image x:Name="imgProfile" HorizontalAlignment="Left" Height="80" Margin="10,35,0,0" VerticalAlignment="Top" Width="100" AllowDrop="True" Source="Assets/TestPicture.png" />
+            <TextBlock x:Name="txtTitel" HorizontalAlignment="Left" Margin="115,35,0,0" TextWrapping="Wrap" Text="Titel" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.45" Foreground="#FF3FB6B6"/>
+            <TextBlock x:Name="txtNaam" HorizontalAlignment="Left" Margin="188,35,0,0" TextWrapping="Wrap" Text="Naam" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.45" Foreground="#FF3FB6B6" d:LayoutOverrides="HorizontalAlignment"/>
+            <TextBlock x:Name="txtVoorNaam" HorizontalAlignment="Left" Margin="308,35,0,0" TextWrapping="Wrap" Text="Voornaam" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.45" Style="{StaticResource ResourceKey=Basistextblock}" d:LayoutOverrides="Width, LeftPosition, RightPosition"/>
+            <TextBlock x:Name="txtAdres" HorizontalAlignment="Left" Margin="419,35,0,0" TextWrapping="Wrap" Text="Adres" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.45" d:LayoutOverrides="LeftPosition, RightPosition">
+                <TextBlock.RenderTransform>
+                    <CompositeTransform/>
+                </TextBlock.RenderTransform>
+            </TextBlock>
+            <TextBlock x:Name="txtPostcode" HorizontalAlignment="Left" Margin="533,35,0,0" TextWrapping="Wrap" Text="Postcode" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.45" d:LayoutOverrides="HorizontalAlignment, Width, LeftMargin, RightMargin"/>
+            <TextBlock x:Name="txtGemeente" HorizontalAlignment="Left" Margin="605,35,0,0" TextWrapping="Wrap" Text="Gemeente" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.45" d:LayoutOverrides="Width, LeftMargin, RightMargin">
+                <TextBlock.RenderTransform>
+                    <CompositeTransform/>
+                </TextBlock.RenderTransform>
+            </TextBlock>
+            <ComboBox x:Name="comboBoxTitel" HorizontalAlignment="Left" Margin="115,83,0,0" VerticalAlignment="Top" Width="52"/>
+            <TextBox x:Name="textBoxNaam" HorizontalAlignment="Left" Margin="188,83,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="112" d:LayoutOverrides="LeftPosition, RightPosition"/>
+            <TextBox x:Name="textBoxVoornaam" HorizontalAlignment="Left" Margin="305,83,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="109" d:LayoutOverrides="LeftPosition, RightPosition"/>
+            <TextBox x:Name="textBoxAdres" HorizontalAlignment="Left" Margin="419,83,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="109" d:LayoutOverrides="LeftPosition, RightPosition"/>
+            <TextBox x:Name="textBoxPostcode" HorizontalAlignment="Left" Margin="533,83,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="67" d:LayoutOverrides="LeftPosition, RightPosition"/>
+            <TextBox x:Name="textBoxPostcode_Copy" HorizontalAlignment="Left" Margin="605,83,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="121" d:LayoutOverrides="HorizontalAlignment, LeftPosition, RightPosition"/>
+
+
+        </Grid>
+    </ScrollViewer>
 </Page>
