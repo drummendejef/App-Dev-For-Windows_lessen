@@ -434,3 +434,5 @@ E:\School\2015 - 2016\App Dev For Windows\Lessen\Week 1\Labo\RelativePanel en VS
 E:\School\2015 - 2016\App Dev For Windows\Lessen\Week 1\Labo\RelativePanel en VSM\RelativePanel en VSM\obj\x86\Debug\Core\RelativePanel en VSM.xr.xml
 E:\School\2015 - 2016\App Dev For Windows\Lessen\Week 1\Labo\RelativePanel en VSM\RelativePanel en VSM\obj\x86\Debug\Core\WinMetadata\Windows.winmd
 E:\School\2015 - 2016\App Dev For Windows\Lessen\Week 1\Labo\RelativePanel en VSM\RelativePanel en VSM\obj\x86\Debug\Core\resources.pri
+E:\School\2015 - 2016\App Dev For Windows\Lessen\Week 1\Labo\RelativePanel en VSM\RelativePanel en VSM\bin\x86\Debug\Core\Assets\TestPicture.png
+E:\School\2015 - 2016\App Dev For Windows\Lessen\Week 1\Labo\RelativePanel en VSM\RelativePanel en VSM\obj\x86\Debug\Core\Assets\TestPicture.png

@@ -8,6 +8,21 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <TextBlock x:Name="txtOefening1" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Oefening 1" VerticalAlignment="Top" RenderTransformOrigin="0.471,0.584"/>
+        <Image x:Name="imgProfile" HorizontalAlignment="Left" Height="80" Margin="10,35,0,0" VerticalAlignment="Top" Width="100" AllowDrop="True" Source="Assets/TestPicture.png" />
+        <TextBlock x:Name="txtTitel" HorizontalAlignment="Left" Margin="115,35,0,0" TextWrapping="Wrap" Text="Titel" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.45"/>
+        <TextBlock x:Name="txtNaam" HorizontalAlignment="Left" Margin="188,35,0,0" TextWrapping="Wrap" Text="Naam" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.45"/>
+        <TextBlock x:Name="txtVoorNaam" HorizontalAlignment="Left" Margin="308,35,0,0" TextWrapping="Wrap" Text="Voornaam" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.45"/>
+        <TextBlock x:Name="txtAdres" HorizontalAlignment="Left" Margin="419,35,0,0" TextWrapping="Wrap" Text="Adres" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.45"/>
+        <TextBlock x:Name="txtPostcode" HorizontalAlignment="Left" Margin="533,35,0,0" TextWrapping="Wrap" Text="Postcode" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.45"/>
+        <TextBlock x:Name="txtGemeente" HorizontalAlignment="Left" Margin="605,35,0,0" TextWrapping="Wrap" Text="Gemeente" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.45"/>
+        <ComboBox x:Name="comboBoxTitel" HorizontalAlignment="Left" Margin="115,83,0,0" VerticalAlignment="Top" Width="52"/>
+        <TextBox x:Name="textBoxNaam" HorizontalAlignment="Left" Margin="188,83,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="112"/>
+        <TextBox x:Name="textBoxVoornaam" HorizontalAlignment="Left" Margin="305,83,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="109"/>
+        <TextBox x:Name="textBoxAdres" HorizontalAlignment="Left" Margin="419,83,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="109"/>
+        <TextBox x:Name="textBoxPostcode" HorizontalAlignment="Left" Margin="533,83,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="67"/>
+        <TextBox x:Name="textBoxPostcode_Copy" HorizontalAlignment="Left" Margin="605,83,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="121"/>
+
 
     </Grid>
 </Page>
