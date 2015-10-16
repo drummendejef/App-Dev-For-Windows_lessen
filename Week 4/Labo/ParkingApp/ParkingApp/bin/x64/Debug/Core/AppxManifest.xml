@@ -16,8 +16,8 @@
   </Properties>
   <Dependencies>
     <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.10240.0" MaxVersionTested="10.0.10240.0" />
-    <PackageDependency Name="Microsoft.NET.CoreRuntime.1.0" MinVersion="1.0.23117.0" Publisher="CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US" />
-    <PackageDependency Name="Microsoft.VCLibs.140.00.Debug" MinVersion="14.0.23019.0" Publisher="CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US" />
+    <PackageDependency Name="Microsoft.NET.CoreRuntime.1.0" MinVersion="1.0.23302.0" Publisher="CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US" />
+    <PackageDependency Name="Microsoft.VCLibs.140.00.Debug" MinVersion="14.0.22929.0" Publisher="CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US" />
   </Dependencies>
   <Resources>
     <Resource Language="EN-US" />
@@ -25,24 +25,40 @@
   <Applications>
     <Application Id="App" Executable="ParkingApp.exe" EntryPoint="ParkingApp.App">
       <uap:VisualElements DisplayName="ParkingApp" Square150x150Logo="Assets\Square150x150Logo.png" Square44x44Logo="Assets\Square44x44Logo.png" Description="ParkingApp" BackgroundColor="transparent">
-        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" />
+        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png"></uap:DefaultTile>
         <uap:SplashScreen Image="Assets\SplashScreen.png" />
       </uap:VisualElements>
+      <Extensions>
+        <Extension Category="windows.backgroundTasks" EntryPoint="ParkingAppWorker.ServiceWorker">
+          <BackgroundTasks>
+            <Task Type="timer" />
+          </BackgroundTasks>
+        </Extension>
+      </Extensions>
     </Application>
   </Applications>
   <Capabilities>
     <Capability Name="internetClient" />
   </Capabilities>
+  <Extensions>
+    <Extension Category="windows.activatableClass.inProcessServer">
+      <InProcessServer>
+        <Path>ParkingApp.exe</Path>
+        <ActivatableClass ActivatableClassId="ParkingAppWorker.Class1" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="ParkingAppWorker.ServiceWorker" ThreadingModel="both" />
+      </InProcessServer>
+    </Extension>
+  </Extensions>
   <build:Metadata>
     <build:Item Name="TargetFrameworkMoniker" Value=".NETCore,Version=v5.0" />
     <build:Item Name="VisualStudio" Version="14.0" />
-    <build:Item Name="VisualStudioEdition" Value="Microsoft Visual Studio Professional 2015" />
+    <build:Item Name="VisualStudioEdition" Value="Microsoft Visual Studio Enterprise 2015" />
     <build:Item Name="OperatingSystem" Version="10.0.10240.16384 (th1.150709-1700)" />
-    <build:Item Name="Microsoft.Build.AppxPackage.dll" Version="14.0.23121.0" />
+    <build:Item Name="Microsoft.Build.AppxPackage.dll" Version="14.0.23311.4" />
     <build:Item Name="ProjectGUID" Value="{5A8150D9-D71E-4B1C-A9A9-537798002F36}" />
     <build:Item Name="OptimizingToolset" Value="None" />
     <build:Item Name="TargetRuntime" Value="Managed" />
-    <build:Item Name="Microsoft.Windows.UI.Xaml.Build.Tasks.dll" Version="14.0.23121.0" />
+    <build:Item Name="Microsoft.Windows.UI.Xaml.Build.Tasks.dll" Version="14.0.23309.0" />
     <build:Item Name="WindowsMobile" Version="10.0.10240.0" />
     <build:Item Name="MakePri.exe" Version="10.0.10240.16384 (th1.150709-1700)" />
   </build:Metadata>

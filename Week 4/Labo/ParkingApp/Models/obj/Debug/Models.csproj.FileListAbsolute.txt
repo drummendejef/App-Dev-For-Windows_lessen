@@ -1,0 +1,5 @@
+E:\School\2015 - 2016\App Dev For Windows\Lessen\Week 4\Labo\ParkingApp\Models\bin\Debug\Models.dll
+E:\School\2015 - 2016\App Dev For Windows\Lessen\Week 4\Labo\ParkingApp\Models\bin\Debug\Models.pdb
+E:\School\2015 - 2016\App Dev For Windows\Lessen\Week 4\Labo\ParkingApp\Models\obj\Debug\Models.csprojResolveAssemblyReference.cache
+E:\School\2015 - 2016\App Dev For Windows\Lessen\Week 4\Labo\ParkingApp\Models\obj\Debug\Models.dll
+E:\School\2015 - 2016\App Dev For Windows\Lessen\Week 4\Labo\ParkingApp\Models\obj\Debug\Models.pdb

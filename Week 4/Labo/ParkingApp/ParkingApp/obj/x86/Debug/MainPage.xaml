@@ -1,0 +1,93 @@
+﻿<Page x:ConnectionId='1'
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ParkingApp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Maps="using:Windows.UI.Xaml.Controls.Maps" x:Name="page"
+    x:Class="ParkingApp.MainPage"
+    mc:Ignorable="d" RequestedTheme="Dark">
+
+    <Page.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontFamily" Value="Interstate Light"/>
+        </Style>
+    </Page.Resources>
+
+    <Grid x:ConnectionId='2' x:Name="Root"  >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:ConnectionId='3' x:Name="VisualStateGroup">
+                <VisualState x:ConnectionId='4' x:Name="Tablet">
+                    <VisualState.Setters>
+
+                    </VisualState.Setters>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="600"/>
+                    </VisualState.StateTriggers>
+                </VisualState>
+                <VisualState x:ConnectionId='5' x:Name="Phone">
+                    <VisualState.Setters>
+
+
+
+
+
+                        <Setter Target="pnlInfo.(Grid.Column)" Value="0"/>
+                        <Setter Target="pnlInfo.(Grid.Row)" Value="1"/>
+                        <Setter Target="map.(Grid.RowSpan)" Value="1"/>
+                        <Setter Target="map.(Grid.ColumnSpan)" Value="2"/>
+                        <Setter Target="pnlInfo.(Grid.ColumnSpan)" Value="2"/>
+                        <Setter Target="pnlInfo.(Grid.RowSpan)" Value="1"/>
+                        <Setter Target="pnlInfo.(FrameworkElement.Width)" Value="NaN"/>
+                        <Setter Target="pnlInfo.(FrameworkElement.Height)" Value="150"/>
+
+
+
+
+
+                    </VisualState.Setters>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0"/>
+                    </VisualState.StateTriggers>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+
+
+        <Maps:MapControl x:ConnectionId='6' x:Name="map"   Grid.RowSpan="2">
+            <Maps:MapItemsControl x:ConnectionId='9' x:Name="mapItems">
+                <Maps:MapItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Button x:ConnectionId='10' Background="Transparent" x:Name="btnMapButton"                            Tag="{Binding ParkingResult}">
+                            <StackPanel>
+                                <TextBlock Foreground="Red" Text="{Binding DisplayName}"/>
+                                <Image Height="50" Width="37" Source="/Assets/location_map_pin_blue5.png" Maps:MapControl.Location="{Binding Location}" />
+                            </StackPanel>
+                        </Button>
+                    </DataTemplate>
+                </Maps:MapItemsControl.ItemTemplate>
+            </Maps:MapItemsControl>
+        </Maps:MapControl>
+
+        <StackPanel x:ConnectionId='7' Background="#009fe3" Padding="5"   Grid.Row="0"  x:Name="pnlInfo"     Grid.RowSpan="2" Grid.Column="1" Width="250" >
+            <TextBlock TextWrapping="Wrap" Text="{Binding name}"/>
+            <TextBlock TextWrapping="Wrap" Text="Maximaal aantal plaatsen"/>
+            <TextBlock TextWrapping="Wrap" Text="{Binding parkingStatus.totalCapacity}"/>
+            <TextBlock TextWrapping="Wrap" Text="Plaatsen beschikbaar"/>
+            <TextBlock TextWrapping="Wrap" Text="{Binding parkingStatus.availableCapacity}"/>
+            <TextBlock x:ConnectionId='8' TextWrapping="Wrap" Text="{Binding contactInfo}"                           x:Name="phoneNr"/>
+        </StackPanel>
+
+    </Grid>
+
+</Page>
+
