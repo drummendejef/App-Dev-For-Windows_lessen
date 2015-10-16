@@ -1,0 +1,33 @@
+﻿<Page
+    x:Class="App1.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Page.Resources>
+        <DataTemplate x:Key="RegistrationTemplate">
+            <StackPanel>
+                <TextBlock x:Name="textBlock" TextWrapping="Wrap" Text="{Binding Naam}" Foreground="#FF2CC957" FontWeight="Bold"/>
+                <TextBox x:Name="textBox" TextWrapping="Wrap" Text="{Binding SelectedCountry.Name, Mode=TwoWay}"/>
+            </StackPanel>
+        </DataTemplate>
+    </Page.Resources>
+    <Page.DataContext>
+        <local:BaseViewModelLocator/>
+    </Page.DataContext>
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <StackPanel Margin="10">
+            <TextBlock x:Name="textBlockLanden" TextWrapping="Wrap" Text="Landen"/>
+            <ComboBox ItemsSource="{Binding MainPageVM.Countries}" DisplayMemberPath="Name" SelectedItem="{Binding MainPageVM.NewRegistration.SelectedCountry, Mode=TwoWay}" />
+            <TextBlock x:Name="textBlockNaam" TextWrapping="Wrap" Text="Naam"/>
+            <TextBox Text="{Binding MainPageVM.NewRegistration.Naam, Mode=TwoWay}" />
+            <Button x:Name="button" Content="Save" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Command="{Binding MainPageVM.SaveCommand}"/>
+            <ListView x:Name="listView" Height="100" ItemsSource="{Binding MainPageVM.Registrations}" ItemTemplate="{StaticResource RegistrationTemplate}"/>
+            <Button x:Name="buttonNextPage" Content="Next Page" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Command="{Binding MainPageVM.NextPageCommand}" />
+
+        </StackPanel>
+    </Grid>
+</Page>

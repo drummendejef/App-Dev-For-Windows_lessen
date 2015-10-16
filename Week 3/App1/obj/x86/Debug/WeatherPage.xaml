@@ -1,0 +1,37 @@
+﻿<Page
+    x:Class="App1.WeatherPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App1"
+    xmlns:TempTrigger="using:App1" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" DataContext="{Binding WeatherPageVM, Mode=OneWay, Source={StaticResource Locator}}">
+
+    <Grid x:ConnectionId='1' x:Name="grid" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:ConnectionId='2' x:Name="VisualStateGroup">
+                <VisualState x:ConnectionId='3' x:Name="VisualState">
+                    <VisualState.Setters>
+                        <Setter Target="grid.(Panel.Background)">
+                            <Setter.Value>
+                                <SolidColorBrush Color="#FFF0F0F0"/>
+                            </Setter.Value>
+                        </Setter>
+                    </VisualState.Setters>
+                    <VisualState.StateTriggers>
+                        <TempTrigger:TemperatureStateTrigger/>
+                    </VisualState.StateTriggers>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+        <Button x:ConnectionId='4' x:Name="button" Content="Mainpage" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <TextBlock x:ConnectionId='5' x:Name="textBlock" HorizontalAlignment="Left" Margin="10,47,0,0" TextWrapping="Wrap" Text="Steden" VerticalAlignment="Top"/>
+        <ComboBox x:ConnectionId='6' x:Name="comboBoxSteden" HorizontalAlignment="Left" Margin="10,72,0,0" VerticalAlignment="Top" Width="120" ItemsSource="{Binding Cities}" SelectedItem="{Binding SelectedCity}"/>
+        <Image x:ConnectionId='7' x:Name="imageWeather" HorizontalAlignment="Left" Height="100" Margin="10,109,0,0" VerticalAlignment="Top" Width="100"/>
+
+
+
+    </Grid>
+</Page>
+
