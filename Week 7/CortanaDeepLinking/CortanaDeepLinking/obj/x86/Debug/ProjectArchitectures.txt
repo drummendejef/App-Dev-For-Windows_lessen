@@ -1,0 +1,1 @@
+C:\Users\dieter\Dropbox\NMCT\2015 - 2016\App Dev for Windows\Week 07 - Cortana\CortanaDeepLinking\CortanaDeepLinking\CortanaDeepLinking.csproj;x86

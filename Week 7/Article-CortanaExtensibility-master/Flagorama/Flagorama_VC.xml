@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<VoiceCommands xmlns="http://schemas.microsoft.com/voicecommands/1.2">
+  <CommandSet xml:lang="en" Name="Flagorama_CommandSet_en">
+    <AppName>Flagorama</AppName>
+    <Example>Flagorama, show me the flag of UK</Example>
+     
+    <Command Name="showFlagList">
+      <Example>Show flag list</Example>
+      <ListenFor RequireAppName="BeforePhrase"> show flag list</ListenFor>
+      <Feedback> Showing flag list </Feedback>
+      <VoiceCommandService Target="FlagoramaService"/>
+    </Command>
+
+    <Command Name="showFlag">
+      <Example> Show flag for Belgium </Example>
+      <ListenFor RequireAppName="BeforePhrase"> show the flag of {flag}</ListenFor>
+      <Feedback> Showing flag of {flag}</Feedback>
+      <VoiceCommandService Target="FlagoramaService"/>
+    </Command>
+
+    <PhraseList Label="flag">
+      <Item>Belgium</Item>
+      <Item>France</Item>
+      <Item>US</Item>
+      <Item>UK</Item>
+    </PhraseList>
+  </CommandSet>
+
+  <CommandSet xml:lang="FR" Name="Flagorama_CommandSet_FR">
+    <AppName>Flagorama</AppName>
+    <Example>Flagorama, montre le drapeau de France</Example>
+
+    <Command Name="showFlagList">
+      <Example>Montre la liste des drapeaux</Example>
+      <ListenFor RequireAppName="BeforePhrase"> [Montre] [la] liste [des] drapeaux</ListenFor>
+      <Feedback> Bien, voila la liste des drapeaux </Feedback>
+      <VoiceCommandService Target="FlagoramaService"/>
+    </Command>
+
+    <Command Name="showFlag">
+      <Example> Montre le drapeau de la Belgique </Example>
+      <ListenFor RequireAppName="BeforePhrase"> [Montre] [le] drapeau [de] [du] [la] [l'] {flag}</ListenFor>
+      <Feedback> Bien, je montre le drapeau de la {flag}</Feedback>
+      <VoiceCommandService Target="FlagoramaService"/>
+    </Command>
+
+    <PhraseList Label="flag">
+      <Item>Belgique</Item>
+      <Item>France</Item>
+      <Item>USA</Item>
+      <Item>Angleterre</Item>
+    </PhraseList>
+  </CommandSet>
+
+  
+</VoiceCommands>

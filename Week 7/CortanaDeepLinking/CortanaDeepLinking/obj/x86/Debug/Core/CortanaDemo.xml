@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<VoiceCommands xmlns="http://schemas.microsoft.com/voicecommands/1.2">
+  <CommandSet xml:lang="en-us" Name="CortanaDeepLinking_en-us">
+    <AppName> Food Helper </AppName>
+    <Example> Show Timetable</Example>
+
+    <Command Name="showMenu">
+      <Example> show me the menu </Example>
+      <ListenFor RequireAppName="BeforePhrase"> show menu {day}</ListenFor>
+      <Feedback> Showing menu {day}</Feedback>
+      <Navigate/>
+    </Command>
+
+    <PhraseList Label="day">
+      <Item> Today </Item>
+      <Item> Tommorow </Item>
+    </PhraseList>
+
+  </CommandSet>
+
+  <!-- Other CommandSets for other languages -->
+
+</VoiceCommands>

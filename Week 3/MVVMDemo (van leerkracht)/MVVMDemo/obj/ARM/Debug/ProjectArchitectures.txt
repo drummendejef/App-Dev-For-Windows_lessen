@@ -1,1 +1,1 @@
-C:\Users\dieter\Dropbox\NMCT\2015 - 2016\App Dev for Windows\Week 03 - StateTriggers + Life Cycle\MVVMDemo\MVVMDemo\MVVMDemo.csproj;arm
+E:\School\2015 - 2016\App Dev For Windows\Lessen\Week 3\MVVMDemo (van leerkracht)\MVVMDemo\MVVMDemo.csproj;arm
